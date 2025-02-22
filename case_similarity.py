@@ -6,7 +6,7 @@ from sklearn.neighbors import NearestNeighbors
 app = Flask(__name__)
 
 # Load dataset
-df = pd.read_csv(r"C:\Users\divan\OneDrive\Documents\Desktop\html\html\sheeghra-nyaya\sheeghra-nyaya-ck-\ml\7k  Unique crime articles.csv")
+df = pd.read_csv("7k  Unique crime articles.csv")
 
 # Combine heading and content summary
 df['combined_text'] = df['heading'].fillna('') + ' ' + df['content_summary'].fillna('')
