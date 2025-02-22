@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
+import flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Load dataset
 df = pd.read_csv("7k  Unique crime articles.csv")
